@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: OCI Lambda demo app
+Resources:
+  OCIDemoFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      ImageUri: ocidemofunction:function-container
+    Metadata:
+      DockerTag: function-container
+      DockerContext: ./app
+      Dockerfile: Dockerfile
