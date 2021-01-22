@@ -40,11 +40,11 @@ outfile.txt
 ```
 
 ## FlaskLambdaDualDeployment
-Build and run in Lambda execution environment:
+Build and run locally and in Lambda execution environment:
 ```
 docker build -t flask-lambda-dual:latest .
 
-docker run -it -p 8080:8000 flask-lambda-dual:latest
+docker run -it -p 8081:8000 flask-lambda-dual:latest
 
 docker tag flask-lambda-dual:latest 397329935272.dkr.ecr.us-east-1.amazonaws.com/flask-lambda-dual:latest
 
