@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
 # Define global args
 ARG FUNCTION_DIR="/home/app/"
 ARG RUNTIME_VERSION="3.9"
@@ -16,7 +19,6 @@ RUN apk add --no-cache build-base libtool autoconf automake libexecinfo-dev make
 RUN mkdir -p ${FUNCTION_DIR}
 # Install Lambda Runtime Interface Client for Python
 RUN python${RUNTIME_VERSION} -m pip install awslambdaric --target ${FUNCTION_DIR}
-
 
 # Stage 3 - Install app server and copy app
 FROM python-alpine

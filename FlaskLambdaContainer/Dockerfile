@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
 # Define global args
 ARG FUNCTION_DIR="/home/app/"
 ARG RUNTIME_VERSION="3.9"
