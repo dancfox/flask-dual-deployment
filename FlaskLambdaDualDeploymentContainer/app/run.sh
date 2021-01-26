@@ -1,9 +1,11 @@
 #!/bin/sh
 
 echo "Starting initial load..."
+
+# AWS_LAMBDA_RUNTIME_API is a Lambda runtime environment variable
 if [ -z ${AWS_LAMBDA_RUNTIME_API} ]; then 
     echo "Running NOT IN Lambda execution environment" 
-    echo "Executing non-Lambda deployment specifc initialization code ..."
+    echo "Executing non-Lambda deployment specific initialization code ..."
     # ECS/EKS/etc.
     gunicorn --bind 0.0.0.0:8000 application:app
 else 
